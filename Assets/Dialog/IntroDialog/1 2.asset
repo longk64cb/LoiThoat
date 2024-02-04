@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d912b1819e807498a76384e6195a0f, type: 3}
+  m_Name: 1 2
+  m_EditorClassIdentifier: 
+  character: 4
+  dialogPos: 1
+  dialogText: "N\u1EBFu nh\u01B0 c\xF4 kh\xF4ng nh\u1EDB ra b\u1EA3n th\xE2n l\xE0
+    ai th\xEC s\u1EBD b\u1ECB m\u1EAFc k\u1EB9t \u1EDF \u0111\xE2y m\xE3i m\xE3i
+    v\xE0 d\u1EA7n qu\xEAn lu\xF4n ch\xEDnh m\xECnh."
+  nextDialog: {fileID: 11400000, guid: 7c88e93b1d81c7446b1118ce35ff29b7, type: 2}
+  dialogChoices: []

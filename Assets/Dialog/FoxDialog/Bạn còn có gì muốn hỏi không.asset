@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d912b1819e807498a76384e6195a0f, type: 3}
+  m_Name: "B\u1EA1n c\xF2n c\xF3 g\xEC mu\u1ED1n h\u1ECFi kh\xF4ng"
+  m_EditorClassIdentifier: 
+  character: 3
+  dialogPos: 0
+  dialogText: "R\u1EA5t vui \u0111\u01B0\u1EE3c g\u1EB7p b\u1EA1n! B\u1EA1n c\xF2n
+    c\xF3 g\xEC mu\u1ED1n h\u1ECFi kh\xF4ng?"
+  nextDialog: {fileID: 0}
+  dialogChoices:
+  - text: "C\xF4ng vi\u1EC7c"
+    nextDialog: {fileID: 11400000, guid: 8bc871e2eb3a7d24296f0998bde64644, type: 2}
+  - text: "Th\xE2n ph\u1EADn"
+    nextDialog: {fileID: 11400000, guid: c44ade5ad3b515048adff3ebad9b3c9e, type: 2}
+  - text: "Kh\xF4ng c\xF3 g\xEC"
+    nextDialog: {fileID: 0}

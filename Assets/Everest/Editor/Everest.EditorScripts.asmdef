@@ -1,0 +1,18 @@
+{
+    "name": "Everest.EditorScripts",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7f1823f3950673740a2cb99280c846e0"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
