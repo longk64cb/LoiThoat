@@ -12,8 +12,15 @@ public class GameController : Singleton<GameController>
     public StartMenuController startMenuController;
     public MainUI mainUI;
     public AchivementUIController achivement;
+    public PlayerController playerController;
 
     [SerializeField] Sprite deadAchiveSprite;
+
+    private void Start()
+    {
+        startMenuController.gameObject.SetActive(true);
+        AudioManager.I.Play(SoundID.day);
+    }
 
     #region Map
     [SerializeField] MapController[] arrMap;
@@ -25,12 +32,25 @@ public class GameController : Singleton<GameController>
     {
         this.gameTime = gameTime;
 
-        foreach (var map in arrMap)
+        LoadingController.I.Loading(() =>
         {
-            map.OnChangeGameTime(gameTime);
-        }
+            foreach (var map in arrMap)
+            {
+                map.OnChangeGameTime(gameTime);
+            }
 
-        mainUI.SetTaskText("Điều tra ao cá vào ban đêm");
+            mainUI.SetTaskText("Điều tra ao cá vào ban đêm");
+
+            if (gameTime == GameTimeEnum.Night)
+            {
+                AudioManager.I.Stop(SoundID.day);
+                AudioManager.I.Stop(SoundID.yard_BG_1);
+                AudioManager.I.Stop(SoundID.yard_BG_2);
+                AudioManager.I.Play(SoundID.night);
+                if (playerController.CurrentMap == MapEnum.Yard)
+                    AudioManager.I.Play(SoundID.yard_BG_night);
+            }
+        });
     }
     #region Game Story
     public DialogUIController dialogController;
@@ -42,10 +62,6 @@ public class GameController : Singleton<GameController>
 
     public bool isEndGame;
 
-    public void Start()
-    {
-        //OnGameFirstDialog();
-    }
 
     public void OnGameFirstDialog()
     {
@@ -54,8 +70,10 @@ public class GameController : Singleton<GameController>
             LoadingController.I.Loading(() =>
             {
                 startMenuController.gameObject.SetActive(false);
+                AudioManager.I.Stop(SoundID.night);
             }, () =>
             {
+                AudioManager.I.Play(SoundID.day);
                 tutorialPopup.Show();
             });
         });
@@ -79,6 +97,7 @@ public class GameController : Singleton<GameController>
         isEndGame = true;
         endGameController.Show();
         achivement.Show(deadAchiveSprite);
+        AudioManager.I.StopAllSound();
     }
     #endregion
 

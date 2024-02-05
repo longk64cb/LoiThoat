@@ -37,17 +37,28 @@ public class MovementController : MonoBehaviour
         MoveAnimation(horz, vert);
     }
 
+    private bool isPlayAudio;
     public void MoveAnimation(float horz, float vert)
     {
         if (horz == 0f &&  vert == 0f)
         {
             animator.SetFloat("speed", 0);
+            if (isPlayAudio)
+            {
+                isPlayAudio = false;
+                AudioManager.I.Stop(SoundID.walk);
+            }
         }
         else
         {
             animator.SetFloat("speed", 1);
             animator.SetFloat("horz", horz);
             animator.SetFloat("vert", vert);
+            if (!isPlayAudio)
+            {
+                isPlayAudio = true;
+                AudioManager.I.Play(SoundID.walk);
+            }
         }
     }
 

@@ -11,6 +11,7 @@ public class StartMenuController : MonoBehaviour
     [SerializeField] GameObject gameIntroGO;
     public void OnStartGame()
     {
+        AudioManager.I.Stop(SoundID.day);
         startBtn.gameObject.SetActive(false);
         LoadingController.I.Loading(() =>
         {
@@ -20,6 +21,7 @@ public class StartMenuController : MonoBehaviour
             gameIntroGO.SetActive(true);
             this.Delay(6f, () =>
             {
+                AudioManager.I.Play(SoundID.night);
                 gameIntroGO.SetActive(false);
                 GameController.I.OnGameFirstDialog();
             });
