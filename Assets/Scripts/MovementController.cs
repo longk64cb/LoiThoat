@@ -9,8 +9,8 @@ public class MovementController : MonoBehaviour
 
     [SerializeField] private float speed = 2f;
 
-    [SerializeField] private Vector2 verticalVector = new Vector2(-0.5f, 0.25f);
-    [SerializeField] private Vector2 horizontalVector = new Vector2(0.5f, 0.25f);
+    [SerializeField] private Vector2 verticalVector = new Vector2(0.5f, 0.25f);
+    [SerializeField] private Vector2 horizontalVector = new Vector2(-0.5f, 0.25f);
     private Vector2 moveDirection;
 
     private void FixedUpdate()
