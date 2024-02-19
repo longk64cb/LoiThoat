@@ -12,15 +12,16 @@ public class DanTamPopup : MonoBehaviour
     [SerializeField] GameObject buttons;
 
     public UnityEvent onAchiveDanTam;
+    public bool isGet;
 
     private void OnEnable()
     {
-        buttons.SetActive(PlayerPrefs.GetInt(IS_DAN_TAM_CLAIMED, 0) == 0);
+        buttons.SetActive(!isGet);
     }
 
     public void OnClaim()
     {
-        PlayerPrefs.SetInt(IS_DAN_TAM_CLAIMED, 1);
+        isGet = true;
         Close();
         onAchiveDanTam?.Invoke();
     }

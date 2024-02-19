@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{46E979BD-94A4-CC76-9F3E-EC3029F28434}</ProjectGuid>
+    <ProjectGuid>{DA6F406B-D0A3-905B-E721-7457F5D11C21}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -321,9 +321,6 @@
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.12f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.12f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.12f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
@@ -377,12 +374,6 @@
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.12f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.12f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.12f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -918,35 +909,35 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{59B4FE08-FA70-8EAD-525A-03D73B7C48AE}</Project>
+      <Project>{C22BCA27-BDA2-AB80-9FB6-468E5CC6F2E2}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{8031A7FB-176B-3102-8FB4-2DEE0D646448}</Project>
+      <Project>{303F5A01-7777-F59A-EB8D-D17F7CE061C7}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{C2BD64F0-DB39-028D-6C25-0408159BFC4F}</Project>
+      <Project>{F482E4EC-A42B-0788-ABB8-09258A5270B9}</Project>
       <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Everest.EditorScripts.csproj">
-      <Project>{09A0FE27-7A67-335C-6C1E-AB22884D3047}</Project>
+      <Project>{B4B4302D-9A27-AFE2-B130-D979E3C41AF4}</Project>
       <Name>Everest.EditorScripts</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlayerPrefsEditor.Editor.csproj">
-      <Project>{25B67B71-D529-FB2E-0119-8ED82557859D}</Project>
+      <Project>{841C9ED1-30CB-89F4-F9A1-93ECDA9256E8}</Project>
       <Name>Unity.PlayerPrefsEditor.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlayerPrefsEditor.Samples.SampleScene.csproj">
-      <Project>{F8E5EF9A-0B8F-7221-8E1D-591C92FAAA0D}</Project>
+      <Project>{BAB0643B-D3AB-1149-EE2B-DAB901FE74AB}</Project>
       <Name>Unity.PlayerPrefsEditor.Samples.SampleScene</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlayerPrefsEditor.EditorResources.csproj">
-      <Project>{46C15145-C9F7-3EAD-B4CA-9DD1F45A0626}</Project>
+      <Project>{F8F4D6BF-7A3A-5745-6902-3534326DDC2C}</Project>
       <Name>Unity.PlayerPrefsEditor.EditorResources</Name>
     </ProjectReference>
     <ProjectReference Include="Everest.csproj">
-      <Project>{F33159F7-E9C2-45C3-2EC3-EE550ABF226D}</Project>
+      <Project>{A57B0295-3815-2994-BF21-35387EF935E9}</Project>
       <Name>Everest</Name>
     </ProjectReference>
   </ItemGroup>

@@ -95,9 +95,14 @@ public class GameController : Singleton<GameController>
     public void EndGame()
     {
         isEndGame = true;
-        endGameController.Show();
-        achivement.Show(deadAchiveSprite);
         AudioManager.I.StopAllSound();
+        AudioManager.I.Play(SoundID.fall);
+
+        this.Delay(1f, () =>
+        {
+            endGameController.Show();
+            achivement.Show(deadAchiveSprite);
+        });
     }
     #endregion
 

@@ -27,5 +27,7 @@ public class AchivementUIController : MonoBehaviour
         sequence.AppendInterval(1f);
         sequence.Append(notiImg.DOFade(0f, 0.5f));
         sequence.OnComplete(() => gameObject.SetActive(false));
+
+        AudioManager.I.Play(SoundID.achivement);
     }
 }

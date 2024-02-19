@@ -103,5 +103,8 @@ public enum SoundID
     fox,
     click,
     door,
-    walk
+    walk,
+    die,
+    fall,
+    achivement
 }

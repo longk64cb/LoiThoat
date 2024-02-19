@@ -10,12 +10,12 @@ public class LoadingController : Singleton<LoadingController>
 {
     [SerializeField] Image loadingImg;
 
-    public void Loading(Action onLoadAction = null, Action onLoadingFinishAction = null)
+    public void Loading(Action onLoadAction = null, Action onLoadingFinishAction = null, float duration = 1f)
     {
         loadingImg.gameObject.SetActive(true);
         Sequence sequence = DOTween.Sequence();
-        sequence.Join(loadingImg.DOFade(1f, 0.5f).From(0f).OnComplete(() => onLoadAction?.Invoke()));
-        sequence.Append(loadingImg.DOFade(0f, 0.5f));
+        sequence.Join(loadingImg.DOFade(1f, duration / 2).From(0f).OnComplete(() => onLoadAction?.Invoke()));
+        sequence.Append(loadingImg.DOFade(0f, duration / 2));
         sequence.OnComplete(() => 
         {
             loadingImg.gameObject.SetActive(false);

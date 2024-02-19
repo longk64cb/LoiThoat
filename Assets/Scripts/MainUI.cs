@@ -13,6 +13,9 @@ public class MainUI : MonoBehaviour
     [SerializeField] Sprite dayMainSprite;
     [SerializeField] Sprite nightMainSprite;
 
+    [SerializeField] Sprite dayMenuSprite;
+    [SerializeField] Sprite nightMenuSprite;
+
     private Tween shakeTween;
 
     public void SetTaskText(string text)
@@ -33,5 +36,30 @@ public class MainUI : MonoBehaviour
 
         GameController.I.SetGameTime(GameTimeEnum.Night);
         mainUIImg.sprite = nightMainSprite;
+        menuImg.sprite = nightMenuSprite;
+    }
+
+    [SerializeField] RectTransform menuRect;
+    [SerializeField] Image menuImg;
+    [SerializeField] Button closeMenuBtn;
+    private bool isShow;
+    public void OnToggleMenu()
+    {
+        if (!isShow)
+        {
+            menuRect.gameObject.SetActive(true);
+            closeMenuBtn.gameObject.SetActive(true);
+            menuRect.DOAnchorPosY(0f, 0.5f);
+            isShow = true;
+        }
+        else
+        {
+            isShow = false;
+            menuRect.DOAnchorPosY(445f, 0.5f).OnComplete(() =>
+            {
+                menuRect.gameObject.SetActive(false);
+                closeMenuBtn.gameObject.SetActive(false);
+            });
+        }
     }
 }

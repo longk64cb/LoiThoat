@@ -18,7 +18,10 @@ public class EndGameController : MonoBehaviour
         deadText.gameObject.SetActive(true);
         gameObject.SetActive(true);
 
-        canvasGroup.DOFade(1f, 1f).From(0f);
+        canvasGroup.DOFade(1f, 1f).From(0f).OnComplete(() =>
+        {
+            AudioManager.I.Play(SoundID.die);
+        });
 
         this.Delay(2f, () =>
         {

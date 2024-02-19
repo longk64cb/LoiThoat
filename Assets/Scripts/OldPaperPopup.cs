@@ -11,16 +11,17 @@ public class OldPaperPopup : MonoBehaviour
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] GameObject buttons;
 
+    public bool isGet = false;
     public UnityEvent onAchiveOldPaper;
 
     private void OnEnable()
     {
-        buttons.SetActive(PlayerPrefs.GetInt(IS_OLD_PAPER_CLAIMED, 0) == 0);
+        buttons.SetActive(!isGet);
     }
 
     public void OnClaim()
     {
-        PlayerPrefs.SetInt(IS_OLD_PAPER_CLAIMED, 1);
+        isGet = true;
         Close();
         onAchiveOldPaper?.Invoke(); 
     }
